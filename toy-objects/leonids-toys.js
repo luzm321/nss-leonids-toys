@@ -2,7 +2,7 @@ const toys = [
     {
         id: 1,
         name: "Slinky",
-        manufacturer: "Alex Brands Inc.",
+        manufacturer: "Alex Brands, Inc",
         color: "green",
         inventory: 21,
         price: 2,
@@ -41,7 +41,7 @@ const toys = [
 const barbie = {
     id: 4,
     name: "Barbie",
-    manufacturer: "Mattel, Inc.",
+    manufacturer: "Mattel, Inc",
     color: "pink",
     inventory: 50,
     price: 25,
@@ -61,7 +61,13 @@ const pogoStick = {
 toys.push(barbie);
 toys.push(pogoStick);
 
+// for (const toy of toys) {
+//     console.log(toy.inventory);
+// };
+
+// Iterate Leonid's Toy Catalog Exercise
+
 for (const toy of toys) {
-    console.log(toy.inventory);
+    console.log(`The ${toy.color} ${toy.name} costs ${toy.price} dollars and is made by ${toy.manufacturer}. We have ${toy.inventory} in our inventory and if you asked me if it is expensive, the answer is ${toy.isExpensive}.`);
 };
 
