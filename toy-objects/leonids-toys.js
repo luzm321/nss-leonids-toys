@@ -28,4 +28,10 @@ const toys = [
     }
 ];
 
-console.log(toys);
+// console.log(toys);
+
+// Displaying property of all toys:
+
+for (const toy of toys) {
+    console.log(toy.inventory);
+};
