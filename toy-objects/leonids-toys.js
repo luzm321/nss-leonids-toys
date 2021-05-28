@@ -52,7 +52,7 @@ const pogoStick = {
     id: 5,
     name: "Pogo Stick",
     manufacturer: "Razor",
-    color: "Red",
+    color: "red",
     inventory: 10,
     price: 40,
     isExpensive: true
@@ -80,11 +80,41 @@ toys.push(pogoStick);
 
 // Finding An Item in An Array(If Inside For Loop) Exercise
 
-const toyToFind = 2;
+// const toyToFind = 2;
 
-for (let toy of toys) {
-    if (toy.id === toyToFind) {
-        toy.price += toy.price + 5
-        console.log(`The ${toy.color} ${toy.name} costs ${toy.price} dollars and is made by ${toy.manufacturer}. We have ${toy.inventory} in our inventory and if you asked me if it is expensive, the answer is ${toy.isExpensive}.`);
-    };
+// for (const toy of toys) {
+//     if (toy.id === toyToFind) {
+//         toy.price += toy.price + 5
+//         console.log(`The ${toy.color} ${toy.name} costs ${toy.price} dollars and is made by ${toy.manufacturer}. We have ${toy.inventory} in our inventory and if you asked me if it is expensive, the answer is ${toy.isExpensive}.`);
+//     };
+// };
+
+//Practice Adding Toys with Functions: Writing an Inventory Purchase Function that will automate adding an id for every toy that gets added to Leonid's toys array catalog
+
+
+const addToyToInventory = (toyObject) => {
+    const lastIndex = toys.length - 1;
+    const currentLastToy = toys[lastIndex];
+    const maxId = currentLastToy.id;
+    const idOfNewToy = maxId + 1;
+    toyObject.id = idOfNewToy;
+    toys.push(toyObject);
 };
+
+const sudokuPuzzle = {
+    name: "Sudoku Puzzle",
+    manufacturer: "Global Sources",
+    color: "white",
+    inventory: 35,
+    price: 15,
+    isExpensive: false
+}
+
+addToyToInventory(sudokuPuzzle);
+
+for (const toy of toys) {
+    console.log(`The ${toy.color} ${toy.name} costs ${toy.price} dollars and is made by ${toy.manufacturer}. We have ${toy.inventory} in our inventory and if you asked me if it is expensive, the answer is ${toy.isExpensive}.`);
+};
+
+console.log(toys);
+
