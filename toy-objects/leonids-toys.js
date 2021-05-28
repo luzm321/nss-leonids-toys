@@ -73,7 +73,18 @@ toys.push(pogoStick);
 
 //Practice: Increasing Leonid's Prices, altering the current for..of loop that displays the toy catalog and increasing the price of each toy by 5% before it is printed for the terminal-based catalog.
 
-for (const toy of toys) {
-    toy.price += toy.price * .05
-    console.log(`The ${toy.color} ${toy.name} costs ${toy.price} dollars.`)
+// for (const toy of toys) {
+//     toy.price += toy.price * .05
+//     console.log(`The ${toy.color} ${toy.name} costs ${toy.price} dollars.`)
+// };
+
+// Finding An Item in An Array(If Inside For Loop) Exercise
+
+const toyToFind = 2;
+
+for (let toy of toys) {
+    if (toy.id === toyToFind) {
+        toy.price += toy.price + 5
+        console.log(`The ${toy.color} ${toy.name} costs ${toy.price} dollars and is made by ${toy.manufacturer}. We have ${toy.inventory} in our inventory and if you asked me if it is expensive, the answer is ${toy.isExpensive}.`);
+    };
 };
