@@ -65,9 +65,15 @@ toys.push(pogoStick);
 //     console.log(toy.inventory);
 // };
 
-// Iterate Leonid's Toy Catalog Exercise
+// Iterate Leonid's Toy Catalog Exercise and using string interpolation/template literal to make/print a sentence with the properties combined
+
+// for (const toy of toys) {
+//     console.log(`The ${toy.color} ${toy.name} costs ${toy.price} dollars and is made by ${toy.manufacturer}. We have ${toy.inventory} in our inventory and if you asked me if it is expensive, the answer is ${toy.isExpensive}.`);
+// };
+
+//Practice: Increasing Leonid's Prices, altering the current for..of loop that displays the toy catalog and increasing the price of each toy by 5% before it is printed for the terminal-based catalog.
 
 for (const toy of toys) {
-    console.log(`The ${toy.color} ${toy.name} costs ${toy.price} dollars and is made by ${toy.manufacturer}. We have ${toy.inventory} in our inventory and if you asked me if it is expensive, the answer is ${toy.isExpensive}.`);
+    toy.price += toy.price * .05
+    console.log(`The ${toy.color} ${toy.name} costs ${toy.price} dollars.`)
 };
-
