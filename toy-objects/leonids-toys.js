@@ -118,3 +118,16 @@ for (const toy of toys) {
 
 console.log(toys);
 
+// Discontinued Toys Exercise: Remove Item Function (splice method: 0 is index position to start, and 1 is number of elements to remove, can take 3rd/4th to add values):
+
+// const idToBeRemoved = 1;
+
+// const removeProduct = (toyId) => {
+//     if (toyId === idToBeRemoved) {
+//         toys.splice(0, 1);                 
+//     };
+// };
+
+// removeProduct(idToBeRemoved);
+// console.log(toys);
+
